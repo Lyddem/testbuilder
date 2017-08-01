@@ -65,6 +65,16 @@ var firstFour = cardNumber.slice(0,4);
       }
     }
   }
+
+  //Union Pay: length of 9 or 16, prefix 644-649
+  if(cardNumber.length === 9 || cardNumber.length === 16){
+    for(var k = 644; k <= 649; k++){
+      if(firstThree === k.toString()){
+        return 'Switch';
+      }
+    }
+  }
+
 };
 
 

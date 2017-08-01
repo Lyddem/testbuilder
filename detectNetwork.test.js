@@ -195,14 +195,14 @@ describe('Maestro', function() {
 describe('should support China UnionPay')
 
 describe('should support Switch', function (){
-  var expect = chai.expect();
+  var expect = chai.expect;
     for (var prefix = 644; prefix <= 649; prefix++) {
   (function(prefix) {
     it('has a prefix of ' + prefix + ' and a length of 16', function (){
       expect(detectNetwork(prefix.toString() + '1234567890123'));
     });
     it('has a prefix of ' + prefix + ' and a length of 9', function (){
-      expect(detectNetwork(prefix.toString() + '1234567890123456'));
+      expect(detectNetwork(prefix.toString() + '123456'));
     });
   })(prefix)
   }
